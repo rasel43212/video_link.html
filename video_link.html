@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ভিডিও লিংক শেয়ার করুন</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin-top: 50px;
+        }
+        input[type="url"] {
+            width: 80%;
+            padding: 10px;
+            margin-top: 20px;
+        }
+        button {
+            padding: 10px 20px;
+            margin-top: 20px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+    <h1>ভিডিও লিংক শেয়ার করুন</h1>
+    <input type="url" id="videoLink" placeholder="এখানে ভিডিও লিংক দিন">
+    <button onclick="shareLink()">শেয়ার করুন</button>
+
+    <script>
+        function shareLink() {
+            const link = document.getElementById('videoLink').value;
+            if (link) {
+                alert("আপনি এই লিংক শেয়ার করেছেন: " + link);
+            } else {
+                alert("দয়া করে একটি ভিডিও লিংক দিন!");
+            }
+        }
+    </script>
+</body>
+</html>
